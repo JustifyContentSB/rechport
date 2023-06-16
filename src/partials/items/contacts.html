@@ -1,0 +1,29 @@
+<div class="contacts__item @@if(!icon){ grid__item}">
+    @@if(icon) {
+    <div class="contacts__icon">
+        <i class="icon icon--@@icon"></i>
+    </div>}
+
+    @@if(Object.keys(address).length && (address.city || address.street)) {
+    <div class="contacts__address">
+        @@if(address.city) {
+        <p class="contacts__city">@@address.city</p>}
+
+        @@if(address.street) {
+        <p class="contacts__street">@@address.street</p>}
+    </div>}
+
+    <div class="contacts__feedback">
+        @@if(department) {
+        <p class="contacts__department">@@department</p>}
+
+        @@for(var i = 0; i < phone.length; i++) {
+        <a class="contacts__tel tel" href="tel:`+phone[i].replace(/\D/g, '')+`">`+phone[i]+`</a>}
+
+        @@if(name) {
+        <p class="contacts__name">Ольга Викторовна</p>}
+
+        @@if(email) {
+        <a class="contacts__email email" href="mailto:@@email">@@email</a>}
+    </div>
+</div>

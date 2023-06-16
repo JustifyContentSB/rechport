@@ -1,0 +1,37 @@
+@import "partials";
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 32px;
+
+  &__item {
+    // display: block;
+    padding: 56px 32px 32px;
+    border: $border-line;
+
+    @include transition(box-shadow);
+
+    @include hover {
+      box-shadow: 0 12px 32px rgb(0 0 0 / 6%);
+      transition: box-shadow ease-in-out 0.25s;
+      border-color: transparent;
+    }
+  }
+
+  @include ms(xxl) {
+    grid-gap: 24px;
+  }
+
+  @include ms(xl) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include ms(md) {
+    grid-gap: 16px;
+
+    &__item {
+      padding: 24px 16px;
+    }
+   }
+}

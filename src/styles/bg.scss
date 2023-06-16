@@ -1,0 +1,11 @@
+@import 'partials';
+
+.bg {
+  &-pattern {
+    color: #fff;
+    position: relative;
+    background-color: #3675bd;
+    background-image: url("./../images/about/pattern.svg");
+    background-size: 77px;
+  }
+}

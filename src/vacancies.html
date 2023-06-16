@@ -1,0 +1,37 @@
+@@include('header.html', {
+    "title": "Вакансии",
+    "layout": "vacancies"
+})
+
+@@include('layouts/inner.html', {
+    "intro": true,
+    "image": "intro-09",
+    "breadcrumbs": [{
+        "title": "О компании",
+        "href": ""
+    }, {
+        "title": "Вакансии",
+        "href": ""
+    }],
+    "title": "Вакансии",
+    "sections": [{
+        "path": "vacancies",
+        "options": {}
+    }, {
+        "path": "contacts",
+        "options": {
+            "data": "vacancies",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "layout": "2-col"
+        }
+    }],
+    "sidebar": true
+})
+
+@@include('footer.html', {
+    "title": "Вакансии",
+    "layout": "vacancies"
+})
+

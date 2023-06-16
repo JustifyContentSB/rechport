@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru"@@if(context.mode){ class="mode--@@mode"}>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+
+    <title>@@title</title>
+
+    <!-- css:main --><!-- /css:main -->
+    <!-- css:modules --><!-- /css:modules -->
+</head>
+
+<body class="page@@if(layout != ''){ page--@@layout}" data-preload>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header class="header@@if(layout !== 'home'){ header--white}">
+            <div class="header__wrapper container">
+               <div class="header__hamburger">
+                    @@include('includes/hamburger.html')
+               </div>
+               <div class="header__logo">
+                    @@include('includes/logo.html', {
+                        "id": "header"
+                    })
+               </div>
+               <div class="header__nav">
+                    @@include('components/menu.html', {
+                        "id": "main"
+                    })
+               </div>
+               <div class="header__actions">
+                    @@include('includes/phone.html', {
+                        "id": "header",
+                        "phone": "8 (333) 953-76-37"
+                    })
+                    <a class="btn btn--filled btn--shadow header__order" href="#modal-order" data-fancybox=""><i class="icon icon--mail"></i><span class="header__order-text">Оставить заявку</span></a>
+               </div>
+            </div>
+        </header>
+
+        <!-- Navbar -->
+        <aside class="navbar navbar--nav">
+            <div class="navbar__wrapper">
+                <div class="navbar__content">
+                    <div class="navbar__nav"></div>
+                    <div class="navbar__phone"></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main" role="main">

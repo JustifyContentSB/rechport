@@ -1,0 +1,24 @@
+@import 'partials';
+
+.development {
+  &__link {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      transition: width 0.5s cubic-bezier(0.35, 0, 0, 1.00);
+      background-color: $primary;
+    }
+
+    &:hover {
+      &:after {
+          width: 100%;
+      }
+    }
+  }
+}

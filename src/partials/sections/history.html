@@ -1,0 +1,14 @@
+<!-- History -->
+<section class="section section--history">
+   <div class="section__wrapper container">
+       <div class="section__content">
+           <div class="history">
+               <div class="history__inner">
+                    @@for(var i = 0; i < 15; i++) {
+                        @@include("sections/history/history-`+(i < 9 ? "0" + (i + 1)  : i + 1)+`.html")
+                    }
+               </div>
+           </div>
+       </div>
+   </div>
+</section>

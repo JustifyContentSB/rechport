@@ -1,0 +1,20 @@
+<!-- Vacancies -->
+<section class="section section--vacancies">
+   <div class="section__wrapper container">
+       <div class="section__header">
+           <h2 class="section__title">Мы приглашаем вас на работу!</h2>
+           <p class="section__desc">Список открытых вакансий и их описание можно также посмотреть <a href="#">здесь</a></p>
+       </div>
+       <div class="section__content">
+           <div class="vacancies">
+               <ul class="grid vacancies__grid">
+                   @@loop('items/vacancies.html', '/data/vacancies.json')
+               </ul>
+
+               <div class="vacancies__middle">
+                  <p>Официальное оформление, социальный пакет, своевременная выплата заработной платы, возможность профессионального обучения и карьерного развития, доставка на работу и с работы транспортом предприятия, иногородним возможна оплата проезда</p>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>

@@ -1,0 +1,53 @@
+[{
+  "id": 1,
+  "title": "О компании",
+  "href": "history.html"
+}, {
+  "id": 2,
+  "title": "Товары",
+  "href": "catalog.html",
+  "items": [
+    {
+      "id": 1,
+      "title": "Песок",
+      "href": "catalog-01.html"
+    }, {
+      "id": 2,
+      "title": "Щебень",
+      "href": "catalog-02.html"
+    },  {
+      "id": 3,
+      "title": "Неликвидный товар",
+      "href": "catalog-02.html"
+    }
+  ]
+}, {
+  "id": 3,
+  "title": "Услуги",
+  "href": "services.html",
+  "items": [{
+    "id": 1,
+    "title": "Погрузо-разгрузочные работы",
+    "href": "service-01.html"
+  }, {
+    "id": 2,
+    "title": "Аренда флота и грузоперевозки",
+    "href": "service-02.html"
+  },  {
+    "id": 3,
+    "title": "Аренда помещений и предоставление инфраструктуры",
+    "href": "service-03.html"
+  },  {
+    "id": 4,
+    "title": "Ремонт флота",
+    "href": "service-04.html"
+  }]
+}, {
+  "id": 4,
+  "title": "Закупки",
+  "href": "#"
+}, {
+  "id": 5,
+  "title": "Контакты",
+  "href": "contacts.html"
+}]

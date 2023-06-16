@@ -1,0 +1,13 @@
+<div class="contacts">
+    @@if(context.subtitle && subtitle) {
+    <div class="contacts__subtitle">@@subtitle</div>}
+
+    <div class="grid contacts__grid@@if(context.layout){ contacts__grid--@@layout}">
+        @@loop("items/contacts.html", "/data/contacts/@@data.json")
+    </div>
+
+    @@if(context.description && description) {
+    <div class="contacts__description">
+        @@description
+    </div>}
+</div>

@@ -1,0 +1,12 @@
+<li class="menu__item@@if(context.cssClass){ @@cssClass}@@if(context.items && items.length){ has-submenu}">
+    <a class="menu__link" href="@@href"@@if(context.target){ target="@@target"}@@if(href.includes('#modal')){ data-fancybox}>@@title</a>
+    @@if(context.items && items.length){
+    <div class="menu__submenu">
+        <ul class="menu__sublist">
+            @@for(var i = 0; i < items.length; i++) {
+            <li class="menu__subitem`+(items[i].cssClass ? ' ' + items[i].cssClass : '')+`">
+                <a class="menu__sublink" href="`+ items[i].href +`" `+(items[i].href.includes('#modal') ? ' data-fancybox' : '') + (items[i].target ? ' target="' + items[i].target + '"' : '')+`>`+ items[i].title +`</a>
+            </li>}
+        </ul>
+    </div>}
+</li>

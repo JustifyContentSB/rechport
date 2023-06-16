@@ -1,0 +1,167 @@
+@import "partials";
+
+.header {
+  color: $white;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  padding: 8px 0 7px;
+  border-bottom: 1px solid rgb(255 255 255 / 16%);
+  transition: top 0.35s ease-in-out;
+  top: 0;
+
+  .header-viewport & {
+    top: -100px;
+  }
+
+  &--white {
+    color: $black;
+    border-color: rgb(239 240 242 / 100%);
+    background-color: $white;
+  }
+
+  &-fixed & {
+    color: $black;
+    border-color: rgb(239 240 242 / 100%);
+    background-color: $white;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__hamburger {
+    display: none;
+  }
+
+  &__nav {
+    font-size: 14px;
+    margin: 0 24px;
+  }
+
+  &__actions {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__phone {
+    margin-right: 32px;
+  }
+
+  &__order {
+    i {
+      display: none;
+    }
+  }
+
+  @include ms(xl) {
+    &__phone {
+      font-size: 18px;
+    }
+
+    &__logo {
+      .logo {
+        &__image {
+          width: 60px;
+          height: 60px;
+        }
+
+        &__content {
+          max-width: 140px;
+          margin-left: 12px;
+        }
+
+        &__text {
+          font-size: 15px;
+
+          &-desktop {
+            display: none;
+          }
+
+          &-mob {
+            display: inline;
+          }
+        }
+
+        &__subtext {
+          display: none;
+        }
+      }
+    }
+
+    &__nav {
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    &__wrapper {
+      justify-content: flex-start;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__hamburger {
+      margin-right: 16px;
+    }
+
+    &__logo {
+      display: inline-flex;
+      margin-right: 16px;
+    }
+
+    &__actions {
+      margin-left: auto;
+    }
+
+    &__order {
+      width: 48px;
+      height: 48px;
+      padding: 14px 15px 14px 13px;
+      border-radius: 50%;
+
+      i {
+        font-size: 17px;
+        color: $white;
+        display: inline;
+      }
+
+      &-text {
+        display: none;
+      }
+    }
+
+    &__hamburger {
+      @media screen and (max-width: 1200px) {
+        display: flex;
+      }
+    }
+  }
+
+  @include ms(md) {
+    &__phone {
+      display: none;
+    }
+  }
+
+  @include ms(sm) {
+    &__logo {
+      margin-right: 4px;
+
+      .logo {
+        &__image {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}
+
+body.menu-opened .header {
+  border-color: rgb(239 240 242 / 100%);
+}

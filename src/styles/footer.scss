@@ -1,0 +1,162 @@
+@import "partials";
+
+.footer {
+  color: $gray;
+  background-color: #0C3551;
+
+  &__row {
+    &--info {
+      padding: 92px 0;
+    }
+
+    &--copyright {
+      padding: 30px 0;
+      border-top: 1px solid rgba(217,217,217, 0.1);
+
+      @include ms(md) {
+        border-top: none;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-gap: 32px;
+    justify-content: space-between;
+
+    .footer__row--info & {
+      grid-template-columns: 1fr 3fr;
+    }
+
+    .footer__row--copyright & {
+      align-items: center;
+      grid-gap: 48px;
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+  }
+
+  &__nav {
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__col {
+    &--socials {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__menu {
+    max-width: 260px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  @include ms(xl) {
+    .footer {
+      &__row--copyright {
+        .footer__wrapper {
+          grid-gap: 32px;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .copyright {
+          &__text {
+            p {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .footer {
+      &__row {
+        &--info {
+          padding: 70px 0 40px;
+
+          .footer__wrapper {
+            display: block;
+          }
+        }
+      }
+
+      &__col {
+        &--logo {
+          margin-bottom: 40px;
+
+          .logo {
+            &__wrapper {
+              text-align: center;
+              align-items: center;
+            }
+
+            &__subtext {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include ms(md) {
+    .footer {
+      &__nav {
+        grid-template-columns: 1fr;
+      }
+
+      &__col {
+        &--menu {
+          display: none;
+        }
+
+        &--socials {
+          order: -1;
+          margin-bottom: 16px;
+        }
+      }
+
+      &__row {
+        &--info {
+          padding: 64px 0 20px;
+        }
+
+        &--copyright {
+          padding: 20px 0 16px;
+
+          .footer {
+            &__wrapper {
+              text-align: center;
+              align-items: center;
+              grid-gap: 0;
+              grid-template-columns: 1fr;
+            }
+          }
+
+          .copyright {
+            &__text {
+              p {
+                display: inline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

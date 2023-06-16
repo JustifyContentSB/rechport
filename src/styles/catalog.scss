@@ -1,0 +1,75 @@
+@import 'partials';
+
+.catalog {
+  &__grid.grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    @include ms(lg) {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    @include ms(lg) {
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+
+    @include ms(sm) {
+      margin-top: 12px;
+    }
+  }
+
+  &__text {
+    color: $gray-light;
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 50%;
+
+    @include ms(sm) {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    margin-top: auto;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    right: -16%;
+    width: 65%;
+    margin-top: auto;
+    transform: translateY(-50%);
+
+    @include ms(sm) {
+      order: -1;
+      position: static;
+      width: 100%;
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<!-- Position -->
+<section class="section section--position">
+    <div class="section__wrapper">
+        <div class="section__content">
+            <div class="position">
+                <div class="position__wrapper container">
+                    <div class="position__content">
+                        <div class="position__contacts">
+                            <div class="section__title position__title">Контакты</div>
+                            @@include('includes/contacts.html', {
+                                "data": "position",
+                                "description": "",
+                                "layout": "vertical"
+                            })
+                        </div>
+                        <div class="position__btn">
+                            @@include('includes/button.html', {
+                                "id": ["filled"],
+                                "text": "Оставить заявку",
+                                "href": "#modal-order",
+                                "tag": "div",
+                                "fancybox": true
+                            })
+                        </div>
+                    </div>
+                    <div class="position__map">
+                        <div class="map map--location" data-map="location"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

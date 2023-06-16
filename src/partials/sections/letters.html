@@ -1,0 +1,20 @@
+<!-- Letters -->
+<section class="section section--letters">
+    <div class="section__wrapper container">
+        <div class="section__header">
+            <h2 class="section__title">Благодарственные письма</h2>
+            <div class="section__actions">
+                <div class="section__action swiper-control swiper-control--prev swiper-button-disabled"></div>
+                <div class="section__action swiper-control swiper-control--next"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section__content">
+        <div class="letters">
+            @@include('components/swiper.html', {
+                "id": "letters",
+                "template": "letters"
+            })
+        </div>
+    </div>
+</section>

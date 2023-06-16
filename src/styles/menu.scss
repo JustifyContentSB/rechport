@@ -1,0 +1,308 @@
+@import 'partials';
+
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+
+        .menu--main & {
+            font-weight: 500;
+
+            &.is-active {
+                .menu__link {
+                    color: $primary;
+                }
+            }
+
+            &.has-submenu {
+              .menu__link {
+                @include icomoon(arrow-down, after) {
+                  font-size: 7px;
+                  margin-left: 12px;
+                  transition: transform ease-in-out 0.15s;
+                }
+              }
+
+              @include hover {
+                .menu__submenu {
+                  display: block;
+                }
+
+                .menu__link {
+                  color: rgb(255 255 255 / 30%);
+
+                  .header-fixed &,
+                  .header--white & {
+                    color: $primary;
+                  }
+
+                  &::before {
+                    width: 32px;
+                  }
+
+                  &::after {
+                    transform: rotate(180deg)
+                  }
+                }
+              }
+            }
+        }
+
+        &:not(:last-child) {
+          margin-right: 32px;
+        };
+    }
+
+    &__subitem {
+      .footer &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &__link {
+      font-weight: 600;
+      color: $white;
+      white-space: nowrap;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+
+      .menu--main & {
+        padding: 12px 0;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          width: 0;
+          height: 3px;
+          transition: width 0.3s ease-in-out;
+          background: $primary;
+        }
+
+        .header-fixed &,
+        .header--white & {
+          color: $black;
+        }
+
+        @include hover {
+          color: rgb(255 255 255 / 30%);
+
+          &::before {
+            width: 32px;
+          }
+
+          .header-fixed &,
+          .header--white & {
+            color: $primary;
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 32px;
+            height: 3px;
+            opacity: 1;
+            background: $primary;
+          }
+        }
+      }
+    }
+
+    &__sublink {
+      font-weight: 400;
+      display: block;
+      font-size: 16px;
+
+      .menu--main & {
+        color: $black;
+        padding: 16px 32px;
+
+        @include hover {
+          color: $black;
+          background-color: #F8F9FB;
+        }
+      }
+    }
+
+    &__submenu {
+      .menu--main & {
+        position: absolute;
+        top: 100%;
+        left: -70%;
+        display: none;
+        min-width: 205px;
+        padding-top: 32px;
+      }
+
+      .footer & {
+        margin-top: 24px;
+      }
+    }
+
+    &__sublist {
+      .menu--main & {
+        padding: 16px 0;
+        box-shadow: 0 32px 64px rgb(0 0 0 / 12%);
+        border-radius: $radius;
+        background: $white;
+      }
+    }
+
+    &--vertical {
+      .menu {
+        &__list {
+          flex-direction: column;
+        }
+
+        &__item {
+          text-align: left;
+          border-bottom: $border-line;
+
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+
+          &.has-submenu {
+            &:hover {
+              .menu {
+                &__submenu {
+                  display: none;
+                }
+
+                &__link {
+                  &::after {
+                    transform: none;
+                  }
+                }
+              }
+            }
+
+            .menu__link {
+              &:hover,
+              &:focus {
+                color: inherit;
+
+                &::before {
+                  display: none;
+                }
+
+                &::after {
+                  display: inline-block;
+                  transform: translateY(-50%) rotate(0deg);
+                }
+              }
+
+              &.is-active {
+                &::after {
+                  transform: translateY(-50%) rotate(180deg);
+                }
+              }
+            }
+          }
+        }
+
+        &__link {
+          padding: 14px 48px 14px 16px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 125%;
+          color: $black;
+          text-transform: none;
+          display: block;
+          position: relative;
+
+          &::before {
+            display: none;
+          }
+
+          &:hover,
+          &:focus {
+            color: inherit;
+
+            &::before {
+              display: none;
+            }
+          }
+
+          &--active {
+            font-weight: 600;
+          }
+
+          @media screen and (max-width: 1200px) {
+            &.is-active {
+              background: #F8F9FB;
+              font-weight: bold;
+            }
+          }
+        }
+
+        &__submenu {
+          padding-top: 0;
+          display: none;
+          position: static;
+        }
+
+        &__sublist {
+          box-shadow: none;
+          border-radius: none;
+          padding: 10px 0;
+
+          @media screen and (max-width: 1200px) {
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+        }
+
+        &__sublink {
+          padding: 14px 16px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    @include ms(lg) {
+      &--vertical {
+        .menu {
+          &__item.has-submenu {
+            &:hover {
+              .menu {
+                &__link {
+                  color: inherit;
+                }
+              }
+            }
+
+            .menu__link {
+              @include icomoon(arrow-right, after) {
+                font-size: 12px;
+                position: absolute;
+                top: 50%;
+                right: 16px;
+                margin: 0;
+                transition: transform ease-in-out 0.15s;
+                transform: translateY(-50%);
+              }
+
+              &.is-active {
+                background: #F8F9FB;
+                font-weight: bold;
+
+                &::after {
+                  transform: translateY(-50%) rotate(90deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}

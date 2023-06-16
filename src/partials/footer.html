@@ -1,0 +1,112 @@
+        @@if(layout === 'home' || layout === 'contacts') {
+            @@include('sections/position.html')
+        }
+
+        @@if(layout !== 'home' && layout !== 'vacancies' && layout !== 'page404' && layout !== 'event' && layout !== 'detail') {
+            @@include('sections/order.html')
+        }
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__row footer__row--info">
+                <div class="footer__wrapper container">
+                    <div class="footer__col footer__col--logo">
+                        @@include('includes/logo.html', {
+                            "id": "footer",
+                            "layout": "footer"
+                        })
+                    </div>
+                    <div class="footer__nav">
+                        <div class="footer__col footer__col--menu">
+                            @@include('components/menu.html', {
+                                "id": "catalog",
+                                "layout": "footer"
+                            })
+                            @@include('components/menu.html', {
+                                "id": "services",
+                                "layout": "footer"
+                            })
+                        </div>
+                        <div class="footer__col footer__col--menu">
+                            @@include('components/menu.html', {
+                                "id": "company",
+                                "layout": "footer"
+                            })
+                            @@include('components/menu.html', {
+                                "id": "purchases",
+                                "layout": "footer"
+                            })
+                            @@include('components/menu.html', {
+                                "id": "contacts",
+                                "layout": "footer"
+                            })
+                        </div>
+                        <div class="footer__col footer__col--location">
+                            <div class="location">
+                                <div class="footer__subtitle location__title">Контакты</div>
+                                <div class="location__phone">
+                                    @@include('includes/phone.html', {
+                                        "id": "footer",
+                                        "phone": "8 (333) 953-76-37"
+                                    })
+                                </div>
+                                <div class="location__address">Самара, ул. Стрелка реки Самары, 3</div>
+                                <a href="mailto:samara@rechport.ru" class="location__email">samara@rechport.ru</a>
+                                <ul class="location__worktimes">
+                                    <li class="location__worktime">Пн-Чт с 8:00 до 17:00</li>
+                                    <li class="location__worktime">Пт с 8:00 до 15:20</li>
+                                    <li class="location__worktime">Сб-Вс выходной</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row footer__row--copyright">
+                <div class="footer__wrapper container">
+                    <div class="footer__col footer__col--copyright">
+                        <div class="copyright">
+                            <div class="copyright__text">
+                                <p>© 2023 rechport.ru</p>
+                                <p>Все права защищены</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer___col footer__col--socials">
+                        @@include('includes/socials.html')
+                    </div>
+                    <div class="footer___col footer__col--development">
+                        <div class="development">
+                            <div class="development__text">Сделано в <a class="development__link" href="//relevant.ru/" target="_blank">Relevant</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    @@include('modals/success.html')
+    @@include('modals/order.html')
+
+     <!-- Back to top -->
+     <div id="topper" class="topper" data-topper></div>
+
+     <script>
+        window.data = {};
+
+        window.data.location = [{
+            id: 1,
+            coords: [53.174585, 50.069839]
+        }, {
+            id: 2,
+            coords: [53.142708, 48.469508]
+        }]
+     </script>
+
+    <!-- js:main --><!-- /js:main -->
+    <!-- js:modules --><!-- /js:modules -->
+</body>
+
+</html>

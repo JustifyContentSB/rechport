@@ -1,0 +1,22 @@
+{
+  "slidesPerView": 4,
+  "navigation": false,
+  "spaceBetween": 16,
+  "breakpoints": {
+      "0": {
+        "slidesPerView": 1,
+        "spaceBetween": 16
+      },
+      "576": {
+        "slidesPerView": 2
+      },
+      "768": {},
+      "992": {
+        "slidesPerView": 3
+      },
+      "1200": {
+        "slidesPerView": 4,
+        "spaceBetween": 32
+      }
+  }
+}

@@ -1,0 +1,13 @@
+@import 'partials';
+
+.tel {
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 125%;
+   white-space: nowrap;
+
+   @include ms(md) {
+    font-size: 18px;
+    line-height: 178%;
+   }
+}

@@ -1,0 +1,66 @@
+<form class="modal__form form form--order">
+    <div class="form__content">
+        <div class="form__group">
+            <div class="form__row">
+                <div class="form__col">
+                    <div class="form__control">
+                        <input type="text" name="order-cargo-type" placeholder="Тип груза" required/>
+                    </div>
+                </div>
+                <div class="form__col">
+                    <div class="form__control">
+                        <input type="text" name="order-cargo-weight" placeholder="Вес груза" required data-phone />
+                    </div>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__col">
+                    <div class="form__control">
+                        <input type="text" name="order-from" placeholder="Откуда" required/>
+                    </div>
+                </div>
+                <div class="form__col">
+                    <div class="form__control">
+                        <input type="text" name="order-to" placeholder="Куда" required data-phone />
+                    </div>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__col">
+                    <div class="form__control">
+                        <input type="text" name="order-name" placeholder="Ф.И.О." required/>
+                    </div>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__col">
+                    <div class="form__control">
+                        <input type="text" name="order-email" placeholder="E-mail" required/>
+                    </div>
+                </div>
+                <div class="form__col">
+                    <div class="form__control">
+                        <input type="tel" data-phone name="order-phone" placeholder="Телефон" required/>
+                    </div>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__col">
+                    <div class="form__control">
+                        <textarea name="order-comment" placeholder="Комментарий"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form__footer">
+            <div class="form__submit">
+                @@include('includes/button.html', {
+                    "id": ["filled"],
+                    "text": "Оставить заявку",
+                    "tag": "button"
+                })
+                <!-- <button class="btn btn--orange">Отправить</button> -->
+            </div>
+        </div>
+    </div>
+</form>

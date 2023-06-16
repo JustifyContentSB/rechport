@@ -1,0 +1,22 @@
+<a class="grid__item catalog__item" href="@@href">
+    <div class="catalog__content">
+        <div class="catalog__title">@@title</div>
+        <div class="catalog__text">@@text</div>
+        <div class="catalog__button">
+            @@include('includes/button.html', {
+                "id": ["filled"],
+                "text": "Оставить заявку",
+                "href": "#modal-order",
+                "tag": "a",
+                "fancybox": true,
+                "child": true
+            })
+        </div>
+    </div>
+    <div class="catalog__image">
+        <img
+            data-src="images/catalog/catalog-0@@id.png"
+            src=""
+            alt="@@title"/>
+    </div>
+</a>

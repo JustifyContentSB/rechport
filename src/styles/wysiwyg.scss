@@ -1,0 +1,150 @@
+@import "partials";
+
+.wysiwyg {
+  font-size: 20px;
+  color: $black;
+
+  @include ms(sm) {
+    font-size: 18px;
+  }
+
+  @include margin-fix;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 2.5rem;
+
+    @include ms(sm) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  h2, .h2 {
+    @include ms(sm) {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+
+  p, ul, ol {
+    line-height: 2rem;
+    margin-bottom: 2.8rem;
+
+    @include mo(xs) {
+      margin-bottom: 1.15em;
+    }
+  }
+
+  img {
+    margin-bottom: 3.5rem;
+  }
+
+  ul, ol {
+    li {
+      position: relative;
+      margin-bottom: 32px;
+
+      @include ms(sm) {
+        margin-bottom: 12px;
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  p + ul,
+  p + .table-wrapper {
+    margin-top: -1.4rem;
+
+    @include ms(sm) {
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    li {
+      padding-left: 1rem;
+
+      &::before {
+        content: "";
+        top: 11px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #245BA7;
+      }
+    }
+  }
+
+  a {
+    font-weight: 600;
+  }
+
+  table {
+    font-size: 18px;
+    width: 100%;
+
+    td,
+    th {
+      white-space: nowrap;
+      padding: 14px 32px;
+    }
+
+    tbody {
+      tr:nth-child(odd) {
+        background-color: #F8F9FB;
+      }
+    }
+
+    tfoot {
+      color: #77899E;
+      padding-top: 32px;
+
+      td {
+        padding-top: 32px;
+      }
+    }
+
+    sup {
+      font-size: 20px;
+      color: #245BA7;
+      top: 0;
+      margin-right: 4px;
+    }
+  }
+}
+
+.table {
+  &-wrapper {
+    margin: 2rem 0 1.5rem;
+    padding-bottom: 0;
+
+    @include touch-scroll;
+
+    @include mo(xs) {
+      width: calc(100% + #{$gutter * 2});
+      margin-right: -$gutter;
+      margin-left: -$gutter;
+      padding-bottom: 0;
+    }
+  }
+
+  &-inner {
+    display: flex;
+
+    @include mo(xs) {
+      padding: 0 $gutter;
+    }
+  }
+}

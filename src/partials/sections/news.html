@@ -1,0 +1,26 @@
+<!-- News -->
+<section class="section section--news">
+    <div class="section__wrapper container">
+        <div class="section__header">
+            <h2 class="section__title">Новости</h2>
+        </div>
+        <div class="section__content">
+            <div class="news">
+                <div class="news__header">
+                    <div class="news__items">
+                        <ul class="news__list">
+                            @@loop('items/news.html', '/data/news.json')
+                        </ul>
+                    </div>
+                </div>
+                <div class="news__footer">
+                    @@include('includes/button.html', {
+                        "id": ["outlined", "arrow", "arrow-right"],
+                        "text": "Все новости",
+                        "href": "#test2",
+                    })
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

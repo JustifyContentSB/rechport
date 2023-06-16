@@ -1,0 +1,65 @@
+@import "partials";
+
+.services {
+  &__grid {
+    @include ms(lg) {
+      display: block;
+    }
+  }
+
+  &__item {
+    display: block;
+    padding: 56px 32px 32px;
+    border: $border-line;
+
+    @include ms(lg) {
+      margin-bottom: 16px;
+    }
+
+    @include ms(sm) {
+      padding: 24px 16px 24px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include hover {
+      box-shadow: 0 12px 32px rgb(0 0 0 / 6%);
+      border-color: transparent;
+
+      .services__title,
+      .services__icon i {
+        color: $primary;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 62px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 16px;
+
+    @include ms(sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    color: $gray-light;
+
+    @include margin-fix;
+  }
+}

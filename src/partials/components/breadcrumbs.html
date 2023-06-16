@@ -1,0 +1,14 @@
+@@if(context.items && context.items.length){
+<div class="breadcrumbs">
+    <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+            <a href="index.html">Главная</a>
+        </li>
+        @@for(var i = 0; i < items.length; i++) {
+        <li class="breadcrumbs__item">
+            <`+(i === (items.length - 1) ? 'span' : 'a')+(i === (items.length - 1) ? '' : ' href="' + items[i].href + '"')+`>
+            `+items[i].title+`
+            </`+(i === (items.length - 1) ? 'span' : 'a') +`>
+        </li>}
+    </ul>
+</div>}

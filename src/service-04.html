@@ -1,0 +1,37 @@
+@@include('header.html', {
+    "title": "Ремонт флота",
+    "layout": "service"
+})
+
+@@include('layouts/inner.html', {
+    "intro": true,
+    "image": "intro-06",
+    "breadcrumbs": [{
+        "title": "Услуги",
+        "href": ""
+    }, {
+        "title": "Ремонт флота",
+        "href": ""
+    }],
+    "title": "Ремонт флота",
+    "sections": [{
+        "path": "service-04/description",
+        "options": {}
+    }, {
+        "path": "contacts",
+        "options": {
+            "data": "service-01",
+            "title": "Заявки",
+            "subtitle": "Заявки на оказание услуг по погрузо-разгрузочным работам принимаются по телефону и на электронную почту:",
+            "description": "<p>Ответственные по данным услугам:<br>Главный инженер – Мотовилов Александр Анатольевич: 8 (846) 200-16-88<br>Главный механик по флоту и плавмеханизации – Нефёдов Павел Константинович: 8 (846) 953-76-44</p>",
+            "layout": "2-col"
+        }
+    }],
+    "sidebar": true
+})
+
+@@include('footer.html', {
+    "title": "Ремонт флота",
+    "layout": "service"
+})
+

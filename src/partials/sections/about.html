@@ -1,0 +1,39 @@
+<!-- About -->
+<section class="section section--about">
+    <div class="section__wrapper">
+        <div class="section__content">
+            <div class="about">
+                <div class="about__row about__row--top bg-pattern">
+                    <div class="about__wrapper container">
+                        <div class="about__content">
+                            <div class="section__title section__title--white about__title">О компании</div>
+                            <div class="about__text">
+                                <p>Самарский речной порт — это крупное транспортное
+                                предприятие, входящее в состав мощного, широко развитого
+                                транспортного узла Самарской области.</p>
+
+                                <p>Порт имеет успешный опыт во всех сферах работ,
+                                осуществляемых на внутренних водных путях Российской
+                                Федерации — перевозки, погрузо-разгрузочные работы,
+                                обслуживание промышленных предприятий и строительства.</p>
+                            </div>
+                            <a href="history.html" class="about__more">Подробнее</a>
+                        </div>
+                        <div class="about__image">
+                            <img data-src="images/about/about-01.jpg" src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="about__row about__row--bottom">
+                    <div class="about__wrapper container">
+                        <div class="about__stats stats">
+                            <ul class="grid stats__grid">
+                                @@loop('items/stats.html', '/data/stats.json')
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

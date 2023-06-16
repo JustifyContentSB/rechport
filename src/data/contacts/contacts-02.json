@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "icon": "",
+    "address": {
+      "city": "",
+      "street": ""
+    },
+    "department": "Приёмная генерального директора",
+    "name": "",
+    "phone": ["8 (846) 2000-878"],
+    "email": "samara@rechport.ru"
+  }, {
+    "id": 2,
+    "icon": "",
+    "address": {
+      "city": "",
+      "street": ""
+    },
+    "department": "Отдел коммерции",
+    "name": "Ольга Викторовна",
+    "phone": ["8 (846) 953-76-37"],
+    "email": "srp-kommerch@rechport.ru"
+  }, {
+    "id": 3,
+    "icon": "",
+    "address": {
+      "city": "",
+      "street": ""
+    },
+    "department": "Приёмная главного инженера",
+    "name": "",
+    "phone": ["8 (846) 200-16-96"],
+    "email": ""
+  }, {
+    "id": 4,
+    "icon": "",
+    "address": {
+      "city": "",
+      "street": ""
+    },
+    "department": "Отдел бухгалтерии",
+    "name": "",
+    "phone": ["8 (846) 310-26-26"],
+    "email": ""
+  }, {
+    "id": 5,
+    "icon": "",
+    "address": {
+      "city": "",
+      "street": ""
+    },
+    "department": "Отдел кадров",
+    "name": "Ольга Викторовна",
+    "phone": ["8 (846) 310-26-61"],
+    "email": ""
+  }, {
+    "id": 6,
+    "icon": "",
+    "address": {
+      "city": "",
+      "street": ""
+    },
+    "department": "Пассажирские перевозки",
+    "name": "ООО «Самарское речное пассажирское предприятие»",
+    "phone": ["8 (846) 222-93-37", "8 (846) 222-91-91"],
+    "email": ""
+  }
+]

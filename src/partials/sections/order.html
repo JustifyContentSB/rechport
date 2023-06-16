@@ -1,0 +1,28 @@
+<!-- Order -->
+<section class="section section--order bg-pattern">
+    <div class="section__wrapper container">
+        <div class="section__content">
+            <div class="order">
+                <div class="order__wrapper">
+                    <div class="order__main">
+                        <div class="order__icon">
+                            <i class="icon icon--document order__i"></i>
+                        </div>
+                        <div class="order__text">
+                            <div class="order__title">Хотите оформить заявку?</div>
+                            <div class="order__subtitle">Заполните форму и наши специалисты свяжутся с вами в ближайшее время!</div>
+                        </div>
+                    </div>
+                    <div class="order__action">
+                        @@include('includes/button.html', {
+                            "id": ["outlined", "bordered", "white"],
+                            "text": "Оставить заявку",
+                            "href": "#modal-order",
+                            "fancybox": true
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

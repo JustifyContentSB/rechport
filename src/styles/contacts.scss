@@ -1,0 +1,178 @@
+@import 'partials';
+
+.contacts {
+   &__box {
+      margin-bottom: 95px;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__subtitle,
+   &__description {
+    font-size: 20px;
+
+    @include ms(sm) {
+      font-size: 18px;
+    }
+   }
+
+   &__subtitle {
+    margin-bottom: 32px;
+   }
+
+   &__description {
+    margin-top: 32px;
+
+    @include margin-fix();
+   }
+
+   &__grid {
+    &.grid {
+      grid-template-columns: repeat(3, 1fr);
+
+      &.contacts__grid--2-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &.contacts__grid--vertical {
+        display: block;
+      }
+    }
+   }
+
+   &__item.grid__item {
+      padding: 32px;
+   }
+
+   &__item {
+      min-height: 232px;
+   }
+
+   &__icon {
+      font-size: 54px;
+      margin-bottom: 26px;
+   }
+
+   &__city {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 125%;
+      display: block;
+      margin-bottom: 16px;
+   }
+
+   &__street {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 160%;
+      margin-bottom: 12px;
+   }
+
+   &__feedback {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      *:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__tel {
+      margin-bottom: 12px;
+   }
+
+   &__department {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 160%;
+      margin-bottom: 16px;
+   }
+
+   &__name {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 133%;
+      color: $gray-light;
+      margin-bottom: 16px;
+   }
+
+   &__email {
+      margin-bottom: 9px;
+   }
+
+   @media screen and (max-width: 900px) {
+    &__grid {
+      &.grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+   }
+
+   @include ms(md) {
+    &__item.grid__item {
+      padding: 24px 16px;
+    }
+
+    &__item {
+      min-height: auto;
+    }
+
+    &__city {
+      margin-bottom: 16px;
+    }
+
+    &__street {
+      font-size: 18px;
+      line-height: 133%;
+      margin-bottom: 6px;
+    }
+
+    &__icon {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    &__department {
+      font-size: 18px;
+      line-height: 178%;
+      margin-bottom: 14px;
+    }
+
+    &__tel {
+      margin-bottom: 10px;
+    }
+   }
+
+   @include ms(sm) {
+    &__grid.grid {
+      display: block;
+    }
+
+    &__item {
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.grid__item {
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+   }
+}
+
+.section.section--contacts {
+  padding: 48px 0;
+
+  @include ms(sm) {
+    padding: 28px 0;
+  }
+}

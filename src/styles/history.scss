@@ -1,0 +1,152 @@
+@import 'partials';
+
+.history {
+  --asideWidth: 480px;
+  --asideMargin: 32px;
+
+  &__box {
+    display: flex;
+    margin-bottom: 90px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__aside {
+    width: 100%;
+    max-width: var(--asideWidth);
+    margin-right: var(--asideMargin);
+  }
+
+  &__title,
+  &__date {
+    position: sticky;
+    top: 100px;
+
+    .header-viewport & {
+      top: 16px;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 125%;
+  }
+
+  &__date {
+    font-size: 110px;
+    font-weight: 600;
+    line-height: 82%;
+    color: #fff;
+    text-shadow: -1px 0 #BDC6D1, 0 1px #BDC6D1, 1px 0 #BDC6D1, 0 -1px #BDC6D1;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  &__info {
+    font-size: 20px;
+    line-height: 160%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - var(--asideWidth) - var(--asideMargin));
+    margin-top: 4px;
+    margin-left: auto;
+
+    p {
+        width: 100%;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+  }
+
+  @include ms(xl) {
+    --asideWidth: 380px;
+
+    &__box {
+      margin-bottom: 64px;
+    }
+
+    &__title,
+    &__date {
+      top: 90px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__date {
+      font-size: 90px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    --asideWidth: 350px;
+    --asideMargin: 20px;
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__date {
+      font-size: 82px;
+    }
+
+    &__info {
+      font-size: 18px;
+      line-height: 133%;
+
+      p {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  @include ms(lg) {
+    --asideWidth: 330px;
+
+    &__title {
+      font-size: 20px;
+      line-height: 160%;
+    }
+
+    &__date {
+      font-size: 76px;
+    }
+  }
+
+  @include ms(md) {
+    --asideWidth: 100%;
+    --asideMargin: 0;
+
+    &__box {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__aside {
+      margin-bottom: 24px;
+    }
+
+    &__info {
+      line-height: 136%;
+      width: 100%;
+      max-width: 100%;
+
+      p {
+        line-height: inherit;
+      }
+    }
+
+    &__date {
+      font-size: 64px;
+      width: 100%;
+      max-width: 260px;
+    }
+  }
+}

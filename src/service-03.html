@@ -1,0 +1,37 @@
+@@include('header.html', {
+    "title": "Аренда помещений и предоставление инфраструктуры",
+    "layout": "service"
+})
+
+@@include('layouts/inner.html', {
+    "intro": true,
+    "image": "intro-05",
+    "breadcrumbs": [{
+        "title": "Услуги",
+        "href": ""
+    }, {
+        "title": "Аренда помещений и предоставление инфраструктуры",
+        "href": ""
+    }],
+    "title": "Аренда помещений и предоставление инфраструктуры",
+    "sections": [{
+        "path": "service-03/description",
+        "options": {}
+    }, {
+        "path": "contacts",
+        "options": {
+            "data": "service-03",
+            "title": "Заявки",
+            "subtitle": "Заявки на оказание услуг по погрузо-разгрузочным работам принимаются по телефону и на электронную почту:",
+            "description": "",
+            "layout": "2-col"
+        }
+    }],
+    "sidebar": true
+})
+
+@@include('footer.html', {
+    "title": "Аренда помещений и предоставление инфраструктуры",
+    "layout": "service"
+})
+

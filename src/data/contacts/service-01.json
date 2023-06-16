@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "icon": "",
+    "address": {
+      "city": "",
+      "street": ""
+    },
+    "department": "Приёмная генерального директора",
+    "name": "",
+    "phone": [],
+    "email": "samara@rechport.ru"
+  }, {
+    "id": 2,
+    "icon": "",
+    "address": {
+      "city": "",
+      "street": ""
+    },
+    "department": "Отдел коммерции ",
+    "name": "Ольга Викторовна",
+    "phone": ["8 (846) 953-76-37"],
+    "email": "srp-kommerch@rechport.ru"
+  }
+]

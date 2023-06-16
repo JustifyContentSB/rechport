@@ -1,0 +1,96 @@
+@import 'partials';
+
+.order {
+  &__wrapper {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__main {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 32px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    opacity: 0.6;
+  }
+
+  &__icon {
+    margin-right: 32px;
+  }
+
+  &__i {
+    font-size: 60px;
+    color: $white;
+  }
+
+  @include ms(lg) {
+    &__title {
+      font-size: 28px;
+    }
+
+    &__i {
+      font-size: 56px;
+    }
+  }
+
+  @include ms(md) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__main {
+      margin: 0;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__i {
+      font-size: 48px;
+    }
+  }
+
+  @include ms(sm) {
+    &__main {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__icon {
+      margin: 0;
+      margin-bottom: 24px;
+      padding-left: 2px;
+    }
+
+    &__subtitle {
+      line-height: 133%;
+    }
+
+    &__action {
+      width: 100%;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.section.section--order {
+  @include ms(sm) {
+    padding: 64px 0;
+  }
+}

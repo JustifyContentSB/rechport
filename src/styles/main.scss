@@ -1,0 +1,26 @@
+@import "partials";
+
+.main {
+  flex-grow: 1;
+
+  .page:not(.page--home) & {
+    margin-top: 89px;
+
+    @include ms(xl) {
+      margin-top: 76px;
+    }
+
+    @include ms(sm) {
+      margin-top: 64px;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+

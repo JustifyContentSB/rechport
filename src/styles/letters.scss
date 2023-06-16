@@ -1,0 +1,124 @@
+@import 'partials';
+
+
+
+.letters {
+  font-size: 18px;
+
+  &__slider {
+    @include ms(sm) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  &__preview {
+    margin-bottom: 32px;
+    padding: 56px 32px 32px;
+    border: $border-line;
+
+    @include transition(box-shadow);
+  }
+
+  &__item {
+    @include hover {
+      .letters__preview {
+        @include hover {
+          box-shadow: 0 12px 32px rgb(0 0 0 / 6%);
+          transition: box-shadow ease-in-out 0.25s;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__company {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__name {
+    margin-bottom: 8px;
+  }
+
+  &__position {
+    color: $gray-light;
+  }
+
+  .swiper {
+    --container-width: 1530px;
+
+    padding-right: 30px;
+
+    @include ms(lg) {
+      padding-right: 15px;
+    }
+
+    padding-left: calc((100% - var(--container-width)) / 2 + (15px));
+
+    @include ms(xxl) {
+      --container-width: 1380px;
+    }
+
+    @include ms(xl) {
+      --container-width: 1200px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      padding-left: 15px;
+    }
+
+    &-controls,
+    &-pagination {
+      display: none;
+    }
+
+    &-pagination {
+      @include ms(sm) {
+        display: block;
+      }
+    }
+  }
+}
+
+.swiper {
+  &-control {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    border: $border-line;
+    border-radius: 50%;
+
+    @include hover {
+      color: $white;
+      background-color: $primary;
+    }
+
+    @include icomoon(arrow-left, after) {
+      font-size: 12px;
+    };
+
+    &--next {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-button {
+    &-disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}
+
+.section.section--letters {
+  .section__actions {
+    @include ms(lg) {
+      display: none;
+    }
+  }
+}

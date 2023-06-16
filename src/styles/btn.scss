@@ -1,0 +1,91 @@
+@import "partials";
+
+.btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: $white;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: $button-padding;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+
+  @include ms(sm) {
+    width: 100%;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  @include transition(background-color, box-shadow);
+
+  @include hover {
+    color: $white;
+    background-color: lighten($primary, 2.5%);
+
+    &:before,
+    &:after {
+      color: $white;
+    }
+  }
+
+  &--filled {
+    transition: box-shadow 0.25s ease-in-out;
+    background-color: $primary;
+  }
+
+  &--shadow {
+    @include hover {
+      box-shadow: 0 8px 16px rgb(36 91 167 / 30%);
+    }
+  }
+
+  &--outlined {
+    color: $primary;
+    border-color: $primary
+  }
+
+  &--bordered {
+    border-color: $white;
+  }
+
+  &--white {
+    color: $white;
+
+    @include hover {
+      color: $primary;
+      background: $white;
+    }
+  }
+
+  &--arrow {
+    &::before,
+    &::after {
+      font-size: 12px;
+      color: $primary;
+    }
+
+    @include icomoon(arrow-left, before) {
+      margin-right: 16px;
+    };
+
+    &-right {
+      &::before {
+        display: none;
+      }
+
+      @include icomoon(arrow-right, after) {
+        margin-right: 0;
+        margin-left: 16px;
+      };
+    }
+  }
+
+  @include ms(xl) {
+    padding: 14px 42px;
+  }
+}

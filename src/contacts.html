@@ -1,0 +1,40 @@
+@@include('header.html', {
+    "title": "Контакты",
+    "layout": "contacts"
+})
+
+@@include('layouts/inner.html', {
+    "intro": false,
+    "image": "",
+    "breadcrumbs": [{
+        "title": "Контакты",
+        "href": ""
+    }],
+    "title": "Контакты",
+    "sections": [{
+        "path": "contacts",
+        "options": {
+            "data": "contacts-01",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "layout": ""
+        }
+    }, {
+        "path": "contacts",
+        "options": {
+            "data": "contacts-02",
+            "title": "Отделы",
+            "subtitle": "",
+            "description": "",
+            "layout": ""
+        }
+    }],
+    "sidebar": false
+})
+
+@@include('footer.html', {
+    "title": "Контакты",
+    "layout": "contacts"
+})
+

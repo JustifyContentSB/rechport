@@ -1,0 +1,34 @@
+@@include('header.html', {
+    "title": "Главная",
+    "layout": "home"
+})
+
+@@include('includes/button.html', {
+    "id": ["filled"],
+    "text": "Оставить заявку",
+    "href": "#test"
+})
+
+@@include('includes/button.html', {
+    "id": ["outlined"],
+    "text": "Заказать звонок",
+    "href": "#test2"
+})
+
+@@include('includes/button.html', {
+    "id": ["outlined", "arrow"],
+    "text": "Продолжить",
+    "href": "#test2",
+})
+
+@@include('includes/button.html', {
+    "id": ["outlined", "arrow", "arrow-right"],
+    "text": "Все новости",
+    "href": "#test2",
+})
+
+@@include('includes/button.html', {
+    "id": ["outlined", "arrow", "arrow-right"],
+    "text": "Вернуться на главную",
+    "href": "#test2",
+})

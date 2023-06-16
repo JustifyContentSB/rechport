@@ -1,0 +1,134 @@
+@import "partials";
+
+@keyframes onAutoFillStart {
+  from {
+  }
+
+  to {
+  }
+}
+
+@keyframes onAutoFillCancel {
+  from {
+  }
+
+  to {
+  }
+}
+
+.form {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  input[type="password"],
+  textarea {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding: $input-padding;
+    border: none;
+    border-bottom: 1px solid $input-border;
+
+    // border-radius: $input-radius;
+
+    @include transition(border-color);
+
+    &:focus {
+      border-color: $primary;
+    }
+
+    &:-webkit-autofill {
+      transition: background-color 50000s ease-in-out 0s;
+      animation-name: onAutoFillStart;
+    }
+
+    &:not(:-webkit-autofill) {
+      animation-name: onAutoFillCancel;
+    }
+  }
+
+  input,
+  textarea,
+  button {
+    box-shadow: none !important;
+    outline: 0 !important;
+    font-variant-ligatures: none;
+    appearance: none;
+
+    &[disabled],
+    &[readonly],
+    &.is-disabled {
+      opacity: $disabled-opacity;
+      pointer-events: none;
+    }
+  }
+
+  input[type="file"] {
+    display: none;
+    visibility: hidden;
+  }
+
+  button {
+    border: 0;
+  }
+
+  select {
+    box-shadow: none;
+    border: 0 !important;
+    outline: 0;
+    background: transparent;
+    background-image: none;
+    appearance: none;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  label {
+    font-size: 90%;
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  &__control {
+    margin-bottom: 32px;
+  }
+
+  &__row {
+    display: flex;
+
+    &:last-child {
+      .form__control {
+        margin-bottom: 0;
+      }
+    };
+
+    @include ms(md) {
+      display: block;
+    }
+  }
+
+  &__col {
+    flex-grow: 1;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+
+      @include ms(md) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    margin-top: 56px;
+  }
+}
+
+[data-fancybox-close] {
+  display: none;
+}

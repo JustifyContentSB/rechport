@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "image": "images/letters/letters-01.png",
+    "company": "ООО «Судостроение»",
+    "name": "Константин Константинопольский",
+    "position": "Директор"
+  }, {
+    "id": 2,
+    "image": "images/letters/letters-01.png",
+    "company": "ООО «Судостроение»",
+    "name": "Константин Константинопольский",
+    "position": "Директор"
+  }, {
+    "id": 3,
+    "image": "images/letters/letters-01.png",
+    "company": "ООО «Судостроение»",
+    "name": "Константин Константинопольский",
+    "position": "Директор"
+  }, {
+    "id": 4,
+    "image": "images/letters/letters-01.png",
+    "company": "ООО «Судостроение»",
+    "name": "Константин Константинопольский",
+    "position": "Директор"
+  }, {
+    "id": 5,
+    "image": "images/letters/letters-01.png",
+    "company": "ООО «Судостроение»",
+    "name": "Константин Константинопольский",
+    "position": "Директор"
+  }, {
+    "id": 6,
+    "image": "images/letters/letters-01.png",
+    "company": "ООО «Судостроение»",
+    "name": "Константин Константинопольский",
+    "position": "Директор"
+  }
+]

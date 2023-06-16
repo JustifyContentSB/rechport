@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "icon": "",
+    "address": {
+      "city": "",
+      "street": ""
+    },
+    "department": "Отдел кадров",
+    "name": "Ольга Викторовна",
+    "phone": ["8 (846) 953-76-37"],
+    "email": "srp-kommerch@rechport.ru"
+  }
+]

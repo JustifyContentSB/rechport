@@ -1,0 +1,40 @@
+@import 'partials';
+
+.hamburger {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 50%;
+
+    span {
+        @include burger($transition-duration: $navbar-duration);
+
+        .menu-opened & {
+            @include burger-to-cross($black);
+        }
+
+        .header-fixed &,
+        .header--white & {
+          @include burger-parts {
+            background-color: $burger-color-fixed;
+          }
+
+          .menu-opened & {
+            @include burger-to-cross($black);
+          }
+        }
+    }
+
+    @include hover {
+        span {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}

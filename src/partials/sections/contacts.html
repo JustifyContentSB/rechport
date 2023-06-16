@@ -1,0 +1,18 @@
+<!-- Contacts -->
+@@for(var i = 0; i < 1; i++) {
+<section class="section section--contacts">
+    <div class="section__wrapper container">
+        @@if(title) {
+        <div class="section__header">
+            <h2 class="section__title">@@title</h2>
+        </div>}
+        <div class="section__content">
+            @@include('includes/contacts.html', {
+                "subtitle": `+JSON.stringify(subtitle)+`,
+                "data": `+JSON.stringify(data)+`,
+                "description": `+JSON.stringify(description)+`,
+                "layout": `+JSON.stringify(layout)+`
+            })
+        </div>
+    </div>
+</section>}

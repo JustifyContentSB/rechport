@@ -1,0 +1,67 @@
+@import "partials";
+
+.logo {
+  color: $white;
+
+  .menu-opened & {
+    color: $black;
+  }
+
+  .header-fixed &,
+  .header--white & {
+    color: $black;
+  }
+
+  @include hover {
+    color: $white;
+    opacity: 0.8;
+
+    .header-fixed &,
+    .header--white & {
+      color: $black;
+    }
+  }
+
+  &--footer {
+    color: $gray;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    .logo--footer & {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+  }
+
+  &__content {
+    max-width: 205px;
+    margin-left: 16px;
+
+    .logo--footer & {
+      margin-top: 16px;
+      margin-left: 0;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    margin-bottom: 2px;
+
+    &-mob {
+      display: none;
+    }
+  }
+
+  &__subtext {
+    font-size: 13px;
+  }
+}

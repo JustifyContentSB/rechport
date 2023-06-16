@@ -1,0 +1,28 @@
+@import 'partials';
+
+.location {
+  font-size: 18px;
+
+  &__phone,
+  &__address,
+  &__email {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__worktime {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  @include ms(md) {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+
+    &__title {
+      display: none;
+    }
+  }
+}
